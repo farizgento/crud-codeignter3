@@ -30,6 +30,9 @@ class Mahasiswa extends CI_Controller{
         $data['data_mahasiswa'] = $this->M_mahasiswa->data_mahasiswa();
         $this->load->view('view_mahasiswa.php', $data);
     }
+    public function create() {
+        $this->load->view('create_mahasiswa.php');
+    }
     public function store() {
         $data = array(
             'nim' => $this->input->post('nim'),

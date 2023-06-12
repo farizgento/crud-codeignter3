@@ -27,6 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <br>
     <br>
     <h4>Daftar Nama Mahasiswa</h4>
+    <a href="<?php echo site_url('mahasiswa/create/'); ?>"><button>Tambah</button></a>
     <table border="1">
         <tr>
             <td>NIM</td>
@@ -41,25 +42,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <td><?php echo $data->nama?></td>
             <td><?php echo $data->alamat?></td>
             <td>
-                <a href="<?php echo site_url('mahasiswa/edit/'.$data->id); ?>">Edit</a>
-                <a href="<?php echo site_url('mahasiswa/delete/'.$data->id); ?>">Delete</a>
+                <a href="<?php echo site_url('mahasiswa/edit/'.$data->id); ?>"><button>edit</button></a>
+                <a href="<?php echo site_url('mahasiswa/delete/'.$data->id); ?>"><button>delete</button></a>
             </td>
         </tr>
         <?php endforeach?>
     </table>
     
     <br>
-    <form method="POST" action="<?php echo site_url('mahasiswa/store'); ?>">
-        <label for="">nim</label><br>
-        <input type="number" name="nim">
-        <br>
-        <label for="">nama</label><br>
-        <input type="text" name="nama">
-        <br>
-        <label for="">alamat</label><br>
-        <input type="alamat" name="alamat">
-        <button type="subit">kirim</button>
-    </form>
     
 </body>
 </html>
